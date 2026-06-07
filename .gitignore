@@ -1,0 +1,26 @@
+# 编译输出
+[Bb]in/
+[Oo]bj/
+
+# NuGet（包由 nuget restore 还原，不入库）
+[Pp]ackages/
+.nuget/
+
+# Claude Code 本地配置
+.claude/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# 构建产物 / 发布包（发布走 GitHub Releases，不入库）
+/dist/
+/release/
+/PowerCapsule-v1.0.zip
+
+# 杂项本地文件（PRD、logo、原型图等，不入库）
+/other/
+
+# README 截图原始素材（已重命名后归入 screenshots/）
+/readme图片/

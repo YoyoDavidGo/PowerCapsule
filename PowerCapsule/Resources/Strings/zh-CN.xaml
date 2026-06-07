@@ -1,0 +1,138 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- 托盘 -->
+    <sys:String x:Key="Tray.Show">显示胶囊</sys:String>
+    <sys:String x:Key="Tray.Hide">隐藏胶囊</sys:String>
+    <sys:String x:Key="Tray.Settings">设置</sys:String>
+    <sys:String x:Key="Tray.ToggleSleep">开启/关闭防睡眠</sys:String>
+    <sys:String x:Key="Tray.CancelShutdown">取消关机任务</sys:String>
+    <sys:String x:Key="Tray.CancelWake">取消唤醒任务</sys:String>
+    <sys:String x:Key="Tray.CancelStandby">取消待机</sys:String>
+    <sys:String x:Key="Tray.Language">Switch to English</sys:String>
+    <sys:String x:Key="Tray.Exit">退出程序</sys:String>
+
+    <!-- Tab -->
+    <sys:String x:Key="Tab.Shutdown">定时关机</sys:String>
+    <sys:String x:Key="Tab.Sleep">防止睡眠</sys:String>
+    <sys:String x:Key="Tab.Wake">定时唤醒</sys:String>
+
+    <!-- 通用 -->
+    <sys:String x:Key="Btn.Apply">应用</sys:String>
+    <sys:String x:Key="Btn.Clear">清除任务</sys:String>
+    <sys:String x:Key="Btn.Cancel">取消</sys:String>
+    <sys:String x:Key="Common.Status">状态：</sys:String>
+    <sys:String x:Key="St.NotSet">未设置</sys:String>
+    <sys:String x:Key="St.NotOn">未开启</sys:String>
+    <sys:String x:Key="St.WakeSet">已设置唤醒</sys:String>
+    <sys:String x:Key="St.ShutdownSetFmt">已设关机 {0}  ·  剩 {1}</sys:String>
+    <sys:String x:Key="St.AwakeFmt">防睡眠中  ·  剩 {0}</sys:String>
+    <sys:String x:Key="Sl.OnMsg">防睡眠已开启</sys:String>
+    <sys:String x:Key="Sl.OffMsg">防睡眠已关闭</sys:String>
+    <sys:String x:Key="Sum.WaitShutdown">等待关机</sys:String>
+    <sys:String x:Key="Sum.OffAtFmt">{0} 关机</sys:String>
+    <sys:String x:Key="Sum.WakePending">到时间唤醒</sys:String>
+
+    <!-- 冲突提示 -->
+    <sys:String x:Key="Conflict.Title">PowerCapsule - 冲突提示</sys:String>
+    <sys:String x:Key="Conflict.ShutdownVsWake">已存在「定时唤醒」任务，但关机后无法被唤醒，唤醒将失效。&#10;是否仍要设置定时关机？</sys:String>
+    <sys:String x:Key="Conflict.WakeVsShutdown">已存在「定时关机」任务，关机后无法被唤醒，本次唤醒将失效。&#10;是否仍要继续？</sys:String>
+    <sys:String x:Key="Conflict.PreventVsSleep">已存在「待机」任务，与「防止睡眠」相互冲突。&#10;继续将取消待机任务，是否继续？</sys:String>
+    <sys:String x:Key="Conflict.SleepVsPrevent">「待机」与当前已开启的「防止睡眠」相互冲突。&#10;继续将关闭防止睡眠，是否继续？</sys:String>
+
+    <!-- 日期项 -->
+    <sys:String x:Key="Date.Today">今天</sys:String>
+    <sys:String x:Key="Date.Tomorrow">明天</sys:String>
+    <sys:String x:Key="Date.DayAfter">后天</sys:String>
+    <sys:String x:Key="Date.Custom">自定义…</sys:String>
+
+    <!-- 定时关机 -->
+    <sys:String x:Key="Sd.Timed">定时</sys:String>
+    <sys:String x:Key="Sd.Countdown">倒计时</sys:String>
+    <sys:String x:Key="Sd.Min">分</sys:String>
+    <sys:String x:Key="Sd.Reminder">提醒</sys:String>
+    <sys:String x:Key="Rem.30">提前 30 秒</sys:String>
+    <sys:String x:Key="Rem.60">提前 1 分钟</sys:String>
+    <sys:String x:Key="Rem.180">提前 3 分钟</sys:String>
+    <sys:String x:Key="Rem.600">提前 10 分钟</sys:String>
+    <sys:String x:Key="Rem.1800">提前 30 分钟</sys:String>
+    <sys:String x:Key="Pre.Quick">常用时长</sys:String>
+    <sys:String x:Key="Pre.5">5 分钟</sys:String>
+    <sys:String x:Key="Pre.10">10 分钟</sys:String>
+    <sys:String x:Key="Pre.15">15 分钟</sys:String>
+    <sys:String x:Key="Pre.20">20 分钟</sys:String>
+    <sys:String x:Key="Pre.30">30 分钟</sys:String>
+    <sys:String x:Key="Pre.45">45 分钟</sys:String>
+    <sys:String x:Key="Pre.60">1 小时</sys:String>
+    <sys:String x:Key="Pre.90">1.5 小时</sys:String>
+    <sys:String x:Key="Pre.120">2 小时</sys:String>
+    <sys:String x:Key="Pre.180">3 小时</sys:String>
+    <sys:String x:Key="Pre.240">4 小时</sys:String>
+    <sys:String x:Key="Pre.360">6 小时</sys:String>
+    <sys:String x:Key="Pre.480">8 小时</sys:String>
+
+    <!-- 防止睡眠 -->
+    <sys:String x:Key="Sl.PreventTitle">防止系统睡眠</sys:String>
+    <sys:String x:Key="Sl.PreventSub">阻止系统自动进入睡眠</sys:String>
+    <sys:String x:Key="Sl.DisplayTitle">保持屏幕常亮</sys:String>
+    <sys:String x:Key="Sl.DisplaySub">显示器不关闭</sys:String>
+    <sys:String x:Key="Sl.Duration">持续</sys:String>
+    <sys:String x:Key="Dur.Always">一直</sys:String>
+    <sys:String x:Key="Dur.Minutes30">30 分钟</sys:String>
+    <sys:String x:Key="Dur.Hours1">1 小时</sys:String>
+    <sys:String x:Key="Dur.Hours2">2 小时</sys:String>
+    <sys:String x:Key="Dur.Hours5">5 小时</sys:String>
+    <sys:String x:Key="Dur.Hours10">10 小时</sys:String>
+    <sys:String x:Key="Dur.Days1">1 天</sys:String>
+    <sys:String x:Key="Dur.Days2">2 天</sys:String>
+    <sys:String x:Key="Dur.Custom">自定义…</sys:String>
+
+    <!-- 定时唤醒 -->
+    <sys:String x:Key="Wk.Time">时间</sys:String>
+    <sys:String x:Key="Wk.Date">日期</sys:String>
+    <sys:String x:Key="Wk.Standby">待机</sys:String>
+    <sys:String x:Key="Wk.Tip">⚠ 仅支持从睡眠 / 休眠中唤醒</sys:String>
+    <sys:String x:Key="Act.None">不启用</sys:String>
+    <sys:String x:Key="Act.Sleep">睡眠</sys:String>
+    <sys:String x:Key="Act.Hibernate">休眠</sys:String>
+    <sys:String x:Key="Dly.0">立即</sys:String>
+    <sys:String x:Key="Dly.3">3 分钟</sys:String>
+    <sys:String x:Key="Dly.10">10 分钟</sys:String>
+    <sys:String x:Key="Dly.30">30 分钟</sys:String>
+    <sys:String x:Key="Dly.60">1 小时</sys:String>
+    <sys:String x:Key="Dly.120">2 小时</sys:String>
+    <sys:String x:Key="Dly.300">5 小时</sys:String>
+    <sys:String x:Key="Dly.600">10 小时</sys:String>
+
+    <!-- 设置窗口 -->
+    <sys:String x:Key="Set.Title">PowerCapsule 设置</sys:String>
+    <sys:String x:Key="Set.Startup">开机自启动</sys:String>
+    <sys:String x:Key="Set.StartupSub">Windows 启动时自动运行</sys:String>
+    <sys:String x:Key="Set.ShowCap">启动后显示胶囊</sys:String>
+    <sys:String x:Key="Set.ShowCapSub">程序启动时自动显示桌面胶囊</sys:String>
+    <sys:String x:Key="Set.AutoCol">胶囊靠边自动收起</sys:String>
+    <sys:String x:Key="Set.AutoColSub">拖到屏幕边缘后半隐藏</sys:String>
+    <sys:String x:Key="Set.Opacity">胶囊透明度</sys:String>
+    <sys:String x:Key="Set.Reminder">关机前提醒</sys:String>
+
+    <!-- 日期选择对话框 -->
+    <sys:String x:Key="Dp.Title">选择日期</sys:String>
+    <sys:String x:Key="Dp.Ok">确定</sys:String>
+    <sys:String x:Key="Dp.Cancel">取消</sys:String>
+
+    <!-- 胶囊状态（代码拼接） -->
+    <sys:String x:Key="Cap.Idle">空闲</sys:String>
+    <sys:String x:Key="Cap.ClickSet">点击设置</sys:String>
+    <sys:String x:Key="Cap.Off">关机</sys:String>
+    <sys:String x:Key="Cap.RemainFmt">剩 {0}</sys:String>
+    <sys:String x:Key="Cap.Wake">唤醒</sys:String>
+    <sys:String x:Key="Cap.KeepAwake">屏幕常亮</sys:String>
+    <sys:String x:Key="Cap.PreventSleep">防睡眠中</sys:String>
+    <sys:String x:Key="Cap.Always">一直</sys:String>
+    <sys:String x:Key="Cap.Sleep">睡眠</sys:String>
+    <sys:String x:Key="Cap.Hibernate">休眠</sys:String>
+    <sys:String x:Key="Cap.SecToOffFmt">{0} 秒后关机</sys:String>
+    <sys:String x:Key="Cap.Imminent">即将执行</sys:String>
+
+</ResourceDictionary>

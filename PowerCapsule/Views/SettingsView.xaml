@@ -1,0 +1,143 @@
+<Window x:Class="PowerCapsule.Views.SettingsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PowerCapsule 设置"
+        Width="284"
+        SizeToContent="Height"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen"
+        UseLayoutRounding="True"
+        TextOptions.TextFormattingMode="Display">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="DividerBrush" Color="#35354A" />
+        <SolidColorBrush x:Key="TextSecondaryBrush" Color="#9090A2" />
+        <SolidColorBrush x:Key="AccentBlueBrush" Color="#D4A040" />
+
+        <Style x:Key="ItemTitle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Microsoft YaHei UI, Segoe UI" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Foreground" Value="#E2E2EC" />
+        </Style>
+        <Style x:Key="ItemSub" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Microsoft YaHei UI, Segoe UI" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Foreground" Value="#8A8AA2" />
+            <Setter Property="Margin" Value="0,2,0,0" />
+        </Style>
+        <Style x:Key="SectionLabel" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Microsoft YaHei UI, Segoe UI" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Foreground" Value="#E2E2EC" />
+        </Style>
+    </Window.Resources>
+
+    <Border Background="#22222C" BorderBrush="#353550" BorderThickness="1" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- 标题栏（可拖动） -->
+            <Border Grid.Row="0" Background="#282834" CornerRadius="10,10,0,0"
+                    MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid Height="32">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{DynamicResource Set.Title}"
+                               FontFamily="Microsoft YaHei UI, Segoe UI" FontSize="12"
+                               FontWeight="SemiBold" Foreground="#E2E2EC"
+                               VerticalAlignment="Center" Margin="14,0,0,0" />
+                    <Button Grid.Column="1" Click="CloseBtn_Click" Cursor="Hand"
+                            Width="38" Height="32">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="b" Background="Transparent" CornerRadius="0,10,0,0">
+                                    <TextBlock Text="✕" FontSize="12" Foreground="#9090A2"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="b" Property="Background" Value="#C0392B" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <!-- 内容 -->
+            <StackPanel Grid.Row="1" Margin="14,10,14,12">
+                <!-- 开机自启 -->
+                <Grid Margin="0,0,0,9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{DynamicResource Set.Startup}" Style="{StaticResource ItemTitle}" />
+                        <TextBlock Text="{DynamicResource Set.StartupSub}" Style="{StaticResource ItemSub}" />
+                    </StackPanel>
+                    <ToggleButton x:Name="StartupToggle" Grid.Column="1"
+                                  VerticalAlignment="Center"
+                                  Style="{StaticResource SwitchToggleStyle}" />
+                </Grid>
+
+                <Border Height="1" Background="#2F2F44" Margin="0,0,0,9" />
+
+                <!-- 启动后显示胶囊 -->
+                <Grid Margin="0,0,0,9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{DynamicResource Set.ShowCap}" Style="{StaticResource ItemTitle}" />
+                        <TextBlock Text="{DynamicResource Set.ShowCapSub}" Style="{StaticResource ItemSub}" />
+                    </StackPanel>
+                    <ToggleButton x:Name="ShowCapsuleToggle" Grid.Column="1"
+                                  VerticalAlignment="Center"
+                                  Style="{StaticResource SwitchToggleStyle}" />
+                </Grid>
+
+                <Border Height="1" Background="#2F2F44" Margin="0,0,0,9" />
+
+                <!-- 靠边自动收起 -->
+                <Grid Margin="0,0,0,9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{DynamicResource Set.AutoCol}" Style="{StaticResource ItemTitle}" />
+                        <TextBlock Text="{DynamicResource Set.AutoColSub}" Style="{StaticResource ItemSub}" />
+                    </StackPanel>
+                    <ToggleButton x:Name="AutoCollapseToggle" Grid.Column="1"
+                                  VerticalAlignment="Center"
+                                  Style="{StaticResource SwitchToggleStyle}" />
+                </Grid>
+
+                <Border Height="1" Background="#2F2F44" Margin="0,0,0,9" />
+
+                <!-- 胶囊透明度 -->
+                <TextBlock Text="{DynamicResource Set.Opacity}" Style="{StaticResource SectionLabel}" Margin="0,0,0,8" />
+                <UniformGrid Rows="1" Columns="3">
+                    <Button x:Name="Opacity80Btn" Content="80%" Click="OpacityBtn_Click" Tag="0.8"
+                            Height="28" Margin="0,0,4,0" Style="{StaticResource PresetButtonStyle}" />
+                    <Button x:Name="Opacity90Btn" Content="90%" Click="OpacityBtn_Click" Tag="0.9"
+                            Height="28" Margin="2,0" Style="{StaticResource PresetButtonStyle}" />
+                    <Button x:Name="Opacity100Btn" Content="100%" Click="OpacityBtn_Click" Tag="1.0"
+                            Height="28" Margin="4,0,0,0" Style="{StaticResource PresetButtonStyle}" />
+                </UniformGrid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

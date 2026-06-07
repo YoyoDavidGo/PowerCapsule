@@ -1,0 +1,138 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Tray -->
+    <sys:String x:Key="Tray.Show">Show Capsule</sys:String>
+    <sys:String x:Key="Tray.Hide">Hide Capsule</sys:String>
+    <sys:String x:Key="Tray.Settings">Settings</sys:String>
+    <sys:String x:Key="Tray.ToggleSleep">Toggle Keep-Awake</sys:String>
+    <sys:String x:Key="Tray.CancelShutdown">Cancel Shutdown</sys:String>
+    <sys:String x:Key="Tray.CancelWake">Cancel Wake</sys:String>
+    <sys:String x:Key="Tray.CancelStandby">Cancel Standby</sys:String>
+    <sys:String x:Key="Tray.Language">切换中文</sys:String>
+    <sys:String x:Key="Tray.Exit">Exit</sys:String>
+
+    <!-- Tab -->
+    <sys:String x:Key="Tab.Shutdown">Shutdown</sys:String>
+    <sys:String x:Key="Tab.Sleep">Awake</sys:String>
+    <sys:String x:Key="Tab.Wake">Wake</sys:String>
+
+    <!-- Common -->
+    <sys:String x:Key="Btn.Apply">Apply</sys:String>
+    <sys:String x:Key="Btn.Clear">Clear</sys:String>
+    <sys:String x:Key="Btn.Cancel">Cancel</sys:String>
+    <sys:String x:Key="Common.Status">Status: </sys:String>
+    <sys:String x:Key="St.NotSet">Not set</sys:String>
+    <sys:String x:Key="St.NotOn">Off</sys:String>
+    <sys:String x:Key="St.WakeSet">Wake set</sys:String>
+    <sys:String x:Key="St.ShutdownSetFmt">Off at {0}  ·  {1} left</sys:String>
+    <sys:String x:Key="St.AwakeFmt">Awake  ·  {0} left</sys:String>
+    <sys:String x:Key="Sl.OnMsg">Keep-awake on</sys:String>
+    <sys:String x:Key="Sl.OffMsg">Keep-awake off</sys:String>
+    <sys:String x:Key="Sum.WaitShutdown">Pending off</sys:String>
+    <sys:String x:Key="Sum.OffAtFmt">off {0}</sys:String>
+    <sys:String x:Key="Sum.WakePending">Wake pending</sys:String>
+
+    <!-- Conflict -->
+    <sys:String x:Key="Conflict.Title">PowerCapsule - Conflict</sys:String>
+    <sys:String x:Key="Conflict.ShutdownVsWake">A wake timer is set, but a powered-off PC cannot be woken — the wake will not fire.&#10;Set the shutdown timer anyway?</sys:String>
+    <sys:String x:Key="Conflict.WakeVsShutdown">A shutdown timer is set; a powered-off PC cannot be woken, so this wake will not fire.&#10;Continue anyway?</sys:String>
+    <sys:String x:Key="Conflict.PreventVsSleep">A Standby task is pending and conflicts with Prevent Sleep.&#10;Continue and cancel the Standby task?</sys:String>
+    <sys:String x:Key="Conflict.SleepVsPrevent">Standby conflicts with the active Prevent Sleep.&#10;Continue and turn off Prevent Sleep?</sys:String>
+
+    <!-- Date items -->
+    <sys:String x:Key="Date.Today">Today</sys:String>
+    <sys:String x:Key="Date.Tomorrow">Tomorrow</sys:String>
+    <sys:String x:Key="Date.DayAfter">In 2 days</sys:String>
+    <sys:String x:Key="Date.Custom">Custom…</sys:String>
+
+    <!-- Shutdown -->
+    <sys:String x:Key="Sd.Timed">Time</sys:String>
+    <sys:String x:Key="Sd.Countdown">Countdown</sys:String>
+    <sys:String x:Key="Sd.Min">min</sys:String>
+    <sys:String x:Key="Sd.Reminder">Alert</sys:String>
+    <sys:String x:Key="Rem.30">30 s before</sys:String>
+    <sys:String x:Key="Rem.60">1 min before</sys:String>
+    <sys:String x:Key="Rem.180">3 min before</sys:String>
+    <sys:String x:Key="Rem.600">10 min before</sys:String>
+    <sys:String x:Key="Rem.1800">30 min before</sys:String>
+    <sys:String x:Key="Pre.Quick">Presets</sys:String>
+    <sys:String x:Key="Pre.5">5 min</sys:String>
+    <sys:String x:Key="Pre.10">10 min</sys:String>
+    <sys:String x:Key="Pre.15">15 min</sys:String>
+    <sys:String x:Key="Pre.20">20 min</sys:String>
+    <sys:String x:Key="Pre.30">30 min</sys:String>
+    <sys:String x:Key="Pre.45">45 min</sys:String>
+    <sys:String x:Key="Pre.60">1 hr</sys:String>
+    <sys:String x:Key="Pre.90">1.5 hr</sys:String>
+    <sys:String x:Key="Pre.120">2 hr</sys:String>
+    <sys:String x:Key="Pre.180">3 hr</sys:String>
+    <sys:String x:Key="Pre.240">4 hr</sys:String>
+    <sys:String x:Key="Pre.360">6 hr</sys:String>
+    <sys:String x:Key="Pre.480">8 hr</sys:String>
+
+    <!-- Keep Awake -->
+    <sys:String x:Key="Sl.PreventTitle">Prevent Sleep</sys:String>
+    <sys:String x:Key="Sl.PreventSub">Stop the system from sleeping</sys:String>
+    <sys:String x:Key="Sl.DisplayTitle">Keep Screen On</sys:String>
+    <sys:String x:Key="Sl.DisplaySub">Display stays on</sys:String>
+    <sys:String x:Key="Sl.Duration">For</sys:String>
+    <sys:String x:Key="Dur.Always">Always</sys:String>
+    <sys:String x:Key="Dur.Minutes30">30 min</sys:String>
+    <sys:String x:Key="Dur.Hours1">1 hr</sys:String>
+    <sys:String x:Key="Dur.Hours2">2 hr</sys:String>
+    <sys:String x:Key="Dur.Hours5">5 hr</sys:String>
+    <sys:String x:Key="Dur.Hours10">10 hr</sys:String>
+    <sys:String x:Key="Dur.Days1">1 day</sys:String>
+    <sys:String x:Key="Dur.Days2">2 days</sys:String>
+    <sys:String x:Key="Dur.Custom">Custom…</sys:String>
+
+    <!-- Wake -->
+    <sys:String x:Key="Wk.Time">Time</sys:String>
+    <sys:String x:Key="Wk.Date">Date</sys:String>
+    <sys:String x:Key="Wk.Standby">Standby</sys:String>
+    <sys:String x:Key="Wk.Tip">⚠ Wake from sleep / hibernate only</sys:String>
+    <sys:String x:Key="Act.None">Off</sys:String>
+    <sys:String x:Key="Act.Sleep">Sleep</sys:String>
+    <sys:String x:Key="Act.Hibernate">Hibernate</sys:String>
+    <sys:String x:Key="Dly.0">Now</sys:String>
+    <sys:String x:Key="Dly.3">3 min</sys:String>
+    <sys:String x:Key="Dly.10">10 min</sys:String>
+    <sys:String x:Key="Dly.30">30 min</sys:String>
+    <sys:String x:Key="Dly.60">1 hr</sys:String>
+    <sys:String x:Key="Dly.120">2 hr</sys:String>
+    <sys:String x:Key="Dly.300">5 hr</sys:String>
+    <sys:String x:Key="Dly.600">10 hr</sys:String>
+
+    <!-- Settings -->
+    <sys:String x:Key="Set.Title">PowerCapsule Settings</sys:String>
+    <sys:String x:Key="Set.Startup">Run at Startup</sys:String>
+    <sys:String x:Key="Set.StartupSub">Auto-run on Windows start</sys:String>
+    <sys:String x:Key="Set.ShowCap">Show Capsule on Start</sys:String>
+    <sys:String x:Key="Set.ShowCapSub">Show desktop capsule on launch</sys:String>
+    <sys:String x:Key="Set.AutoCol">Auto-hide at Edge</sys:String>
+    <sys:String x:Key="Set.AutoColSub">Half-hide when dragged to edge</sys:String>
+    <sys:String x:Key="Set.Opacity">Capsule Opacity</sys:String>
+    <sys:String x:Key="Set.Reminder">Shutdown Alert</sys:String>
+
+    <!-- Date picker -->
+    <sys:String x:Key="Dp.Title">Pick a Date</sys:String>
+    <sys:String x:Key="Dp.Ok">OK</sys:String>
+    <sys:String x:Key="Dp.Cancel">Cancel</sys:String>
+
+    <!-- Capsule status -->
+    <sys:String x:Key="Cap.Idle">Idle</sys:String>
+    <sys:String x:Key="Cap.ClickSet">click to set</sys:String>
+    <sys:String x:Key="Cap.Off">off</sys:String>
+    <sys:String x:Key="Cap.RemainFmt">{0} left</sys:String>
+    <sys:String x:Key="Cap.Wake">wake</sys:String>
+    <sys:String x:Key="Cap.KeepAwake">Screen On</sys:String>
+    <sys:String x:Key="Cap.PreventSleep">Awake</sys:String>
+    <sys:String x:Key="Cap.Always">always</sys:String>
+    <sys:String x:Key="Cap.Sleep">Sleep</sys:String>
+    <sys:String x:Key="Cap.Hibernate">Hibernate</sys:String>
+    <sys:String x:Key="Cap.SecToOffFmt">{0}s to off</sys:String>
+    <sys:String x:Key="Cap.Imminent">soon</sys:String>
+
+</ResourceDictionary>
