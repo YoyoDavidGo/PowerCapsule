@@ -36,7 +36,7 @@ namespace PowerCapsule.Services
             CancelShutdown();
 
             var result = ProcessHelper.RunCommand("shutdown", $"/s /t {seconds}");
-            if (!result.Success && !string.IsNullOrEmpty(result.Error))
+            if (!result.Success)
                 throw new InvalidOperationException("关机任务创建失败，请检查系统权限或安全软件限制。");
 
             IsShutdownScheduled = true;

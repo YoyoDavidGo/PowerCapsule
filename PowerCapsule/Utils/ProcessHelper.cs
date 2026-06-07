@@ -32,19 +32,30 @@ namespace PowerCapsule.Utils
 
                     if (!asAdmin)
                     {
-                        var output = process.StandardOutput.ReadToEnd();
-                        var error = process.StandardError.ReadToEnd();
-                        process.WaitForExit(5000);
+                        // 异步读两个流，避免“先读满 stdout 再读 stderr”在管道缓冲写满时死锁
+                        var outputTask = process.StandardOutput.ReadToEndAsync();
+                        var errorTask = process.StandardError.ReadToEndAsync();
+
+                        if (!process.WaitForExit(5000))
+                        {
+                            try { process.Kill(); } catch { }
+                            return new ProcessResult { Success = false, Error = "命令执行超时" };
+                        }
+
                         return new ProcessResult
                         {
                             Success = process.ExitCode == 0,
-                            Output = output,
-                            Error = error,
+                            Output = outputTask.Result,
+                            Error = errorTask.Result,
                             ExitCode = process.ExitCode
                         };
                     }
 
-                    process.WaitForExit(5000);
+                    if (!process.WaitForExit(5000))
+                    {
+                        try { process.Kill(); } catch { }
+                        return new ProcessResult { Success = false, Error = "命令执行超时" };
+                    }
                     return new ProcessResult
                     {
                         Success = process.ExitCode == 0,

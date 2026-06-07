@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using PowerCapsule.Utils;
 
 namespace PowerCapsule.Services
@@ -15,13 +16,17 @@ namespace PowerCapsule.Services
             DeleteWakeTask();
 
             var timeStr = wakeTime.ToString("HH:mm");
+            // schtasks 的 /sd 日期格式必须匹配当前用户区域设置的短日期格式，
+            // 硬编码 yyyy/MM/dd 在 en-US 等区域会被拒绝导致任务创建失败
+            var dateStr = wakeTime.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern,
+                CultureInfo.CurrentCulture);
 
             var createArgs =
                 $"/create /tn \"{TaskName}\" " +
                 $"/tr \"cmd /c exit\" " +
                 $"/sc once " +
                 $"/st {timeStr} " +
-                $"/sd {wakeTime:yyyy/MM/dd} " +
+                $"/sd {dateStr} " +
                 "/f";
 
             var result = ProcessHelper.RunCommand("schtasks", createArgs);

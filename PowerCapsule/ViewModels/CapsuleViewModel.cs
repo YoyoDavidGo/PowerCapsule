@@ -197,6 +197,8 @@ namespace PowerCapsule.ViewModels
         {
             _updateTimer?.Stop();
             _sleepPreventService.StateChanged -= OnStateChanged;
+            _sleepService.StateChanged -= OnStateChanged;
+            Services.LocalizationManager.LanguageChanged -= UpdateDisplay;
         }
     }
 }
